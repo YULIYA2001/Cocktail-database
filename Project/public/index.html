@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+    <title>SCocktail</title>
+
+    <style>
+        /* Переменные для цветов */
+:root {
+    --dark-text-color: rgb(153, 84, 6);
+    --light-color: rgb(226, 145, 53);
+    --cream-color: rgb(255, 239, 220);
+}
+
+
+/* Полоса прокрутки */
+::-webkit-scrollbar {
+    width: 10px;
+    background: linear-gradient(var(--light-color), var(--cream-color));
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--light-color);
+}
+
+body {
+    background: linear-gradient(var(--light-color), var(--cream-color)) no-repeat;
+    height: 100%;
+    background-color: var(--cream-color);
+}
+
+
+
+/* Header */
+.header {
+    max-width: 100%;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background: linear-gradient(var(--light-color), var(--cream-color));
+}
+
+.header__caption {
+    font-size: 5vw;
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive;
+    color: var(--dark-text-color);
+    margin-bottom: 5%;
+}
+
+/* Header Nav */
+.nav {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    float: right;
+
+}
+
+.nav__link {
+    display: block;
+    margin: 20% 5% 20% 0;
+    color: var(--dark-text-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color .2s linear;
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    display: block;
+    width: 105%;
+    height: 3px;
+    opacity: 0;
+    transition: opacity .2s linear;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+.nav__link:hover:after {
+    opacity: 1
+}
+
+/* Header Logo */
+a.logo {
+    text-decoration: none;
+}
+
+a.logo>figure {
+    margin: 20px 15px 0px;
+}
+
+a.logo>figure>img {
+    max-width: 10vw;
+}
+
+a.logo>figure>figcaption {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: var(--dark-text-color);
+}
+
+/* Header Search */
+form.search {
+    width: 35vw;
+}
+
+form.search input[type=search] {
+    padding: 10px;
+    font-size: 16px;
+    float: left;
+    width: 80%;
+    border: 2px solid var(--light-color);
+    color: var(--dark-text-color);
+    border-radius: 7px 0 0 7px;
+}
+
+form.search input[type=search]::placeholder {
+    color: var(--light-color);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+form.search input[type=search]:focus {
+    outline: none;
+}
+
+form.search input[type=search]::-webkit-search-cancel-button {
+    display: none;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: var(--light-color);
+    color: var(--cream-color);
+    font-size: 16px;
+    border: 2px solid var(--light-color);
+    border-radius: 0 7px 7px 0;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search button:hover {
+    background: var(--dark-text-color);
+    border-color: var(--dark-text-color);
+}
+
+/* Clear floats */
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+/* Main */
+.main {
+    background-color: var(--cream-color);
+}
+
+.menu-sign {
+    display: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    color: var(--dark-text-color);
+}
+
+.top-list,
+#catalog-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#catalog-list {
+    padding-bottom: 5%;
+}
+
+div.top-list-item,
+div.catalog-list-item {
+    display: inline-block;
+    width: 22%;
+    border-radius: 30px;
+    border-width: 4px;
+    border-color: var(--dark-text-color);
+    border-style: solid;
+    margin: 1%;
+    align-items: center;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.container p {
+    font-size: 2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+    text-align: center;
+    color: var(--dark-text-color);
+    margin: 0.5em auto;
+}
+
+.container p:hover {
+    white-space: normal;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 4vw;
+    margin: 7% 0 -1%;
+}
+
+#top-title {
+    margin-top: 0;
+}
+
+
+.container hr {
+    border-color: var(--dark-text-color);
+    background-color: var(--dark-text-color);
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 auto 2%;
+    width: 20em;
+}
+
+/* Рейтинг */
+.rating-result {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center
+}
+
+.rating-result span {
+    padding: 0;
+    font-size: 2.5vw;
+    color: rgb(212, 212, 211);
+}
+
+.rating-result>span:before {
+    content: '✔';
+}
+
+.rating-result>span.active {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-color);
+    min-width: 650px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .copyright {
+    margin-left: 0;
+    margin-right: auto;
+    color: var(--cream-color);
+}
+
+footer .contacts {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+footer .contacts a {
+    color: var(--cream-color);
+    display: inline-block;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+footer .contacts a i {
+    vertical-align: middle;
+    font-size: 1.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+
+
+
+
+/* Mobile version */
+@media only screen and (max-device-width : 500px),
+(max-width : 650px) {
+
+    a.logo {
+        width: 0;
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-sign {
+        display: block;
+        color: var(--dark-text-color);
+        font-size: 60px;
+        margin-right: 10px;
+    }
+
+    .menu-sign:hover {
+        display: block;
+    }
+
+    .nav a {
+        color: var(--dark-text-color);
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 3vw;
+        margin: 0;
+    }
+
+
+    .menu-sign {
+        background: transparent;
+        display: block;
+        position: absolute;
+        right: 1%;
+        top: 1%;
+    }
+
+    .nav a:hover {
+        background-color: var(--dark-text-color);
+        color: var(--cream-color);
+    }
+
+    /* Header */
+    .nav {
+        font-size: 2vw;
+        margin-left: -60px;
+        margin-top: 60px;
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    .header {
+        padding-left: 0;
+    }
+
+    .header__caption {
+        font-size: 8vw;
+        align-self: start;
+        margin-bottom: auto;
+    }
+
+    /* Header Search */
+    form.search {
+        width: 60vw;
+    }
+
+    form.search input[type=search] {
+        font-size: 25px;
+    }
+
+    form.search button {
+        font-size: 25px;
+        width: 50px;
+    }
+
+
+    .container {
+        width: 80%;
+    }
+
+    div.top-list-item,
+    div.catalog-list-item {
+        display: block;
+        width: 70%;
+        margin: 2% auto;
+    }
+
+    .container p {
+        font-size: 6vw;
+        margin: 0 5%;
+    }
+
+    .rating-result span {
+        font-size: 6vw;
+    }
+
+    .container h2 {
+        font-size: 8vw;
+    }
+
+    footer {
+        height: 80px;
+        padding: 0 10px;
+    }
+
+    footer .contacts {
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    footer .copyright {
+        font-size: 20px;
+    }
+
+    footer .contacts a i {
+        font-size: 50px;
+    }
+
+    footer .contacts a {
+        margin-left: 10px;
+        width: 60px;
+        height: 60px;
+    }
+}
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <figure>
+                <img src="assets/images/logo.png" alt="Logo">
+                <figcaption>SCoctail</figcaption>
+            </figure>
+        </a>
+        <div>
+            <h1 class="header__caption">Share a cocktail</h1>
+            <form class="search">
+                <input type="search" placeholder="Искать коктейль..." required>
+                <button class="search-submit" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <a href="javascript:void(0);" class="menu-sign" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <nav class="nav" id="nav">
+            <a class="nav__link" href="login.html">Вход</a>
+            <a class="nav__link" href="registration.html">Регистрация</a>
+            <a class="nav__link" href="#catalog-list">Каталог</a>
+            <a class="nav__link" href="create.html">Добавить</a>
+            <!-- <a class="nav__link" href="#">Выход</a> -->
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <h2 id="top-title">TOP</h2>
+            <hr>
+            <div class="top-list">
+
+                <div class="top-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Название1</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                    </div>
+                </div>
+
+                <div class="top-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Название2</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="top-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Какое-то длинное название3</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="top-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Какое-то очень супер чрезмерно слишком длинное название4</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="catalog-title">КАТАЛОГ</h2>
+            <hr>
+            <div id="catalog-list">
+
+                <div class="catalog-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Название1</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                    </div>
+                </div>
+
+                <div class="catalog-list-item">
+                    <a href="catalog.html" title="Страничка коктейля">
+                        <p>Название2</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="catalog-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Какое-то длинное название3</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="catalog-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Какое-то очень супер чрезмерно слишком длинное название4</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="catalog-list-item">
+                    <a href="show.html" title="Страничка коктейля">
+                        <p>Какое-то очень супер чрезмерно слишком длинное 11111111111111 название5</p>
+                        <img src="assets/images/glass.png" alt="Glass">
+                    </a>
+                    <div class="rating-result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="copyright">Copyright @ 2022. Yuliya Golubovich </p>
+        <div class="contacts">
+            <a href="https://vk.com/" class="vk-link"><i class="fa fa-vk"></i></a>
+            <a href="https://web.telegram.org/" class="telegram-link"><i class="fa fa-telegram"></i></a>
+            <a href="mailto:gyuliya2001@gmail.com" class="mail-link"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

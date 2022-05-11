@@ -1,0 +1,155 @@
+/* Переменные для цветов */
+:root {
+    --dark-text-color: rgb(153, 84, 6);
+    --light-color: rgb(226, 145, 53);
+    --cream-color: rgb(255, 239, 220);
+}
+
+/* Полоса прокрутки */
+::-webkit-scrollbar {
+    width: 10px;
+    background: linear-gradient(var(--light-color), var(--cream-color));
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--light-color);
+}
+
+
+body {
+    background: linear-gradient(var(--light-color), var(--cream-color)) no-repeat;
+    height: 100%;
+    background-color: var(--cream-color);
+}
+
+
+/* Header */
+header h1 {
+    font-size: 4.5vw;
+    font-weight: 700;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    margin: 0;
+    color: var(--dark-text-color);
+}
+
+
+/* Main */
+.main {
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    width: 50%;
+    margin: 30px auto;
+    font-size: 1.5em;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+fieldset {
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--dark-text-color);
+    color: var(--dark-text-color);
+}
+
+div.main-form-fieldset-content {
+    padding: 20px 20px 5px;
+    width: 60%;
+}
+
+input.signin-button {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 30%;
+    font-size: 2vw;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--dark-text-color);
+}
+
+legend {
+    font-size: 4vw;
+    font-weight: 400;
+}
+
+label {
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+input {
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: var(--dark-text-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: var(--cream-color);
+    color: var(--dark-text-color);
+}
+
+input:focus {
+    color: black;
+}
+
+input.signin-button:hover {
+    background-color: var(--dark-text-color);
+    color: var(--cream-color);
+}
+
+
+/* Mobile version */
+@media only screen and (max-device-width : 500px),
+(max-width : 650px) {
+
+    main {
+        width: 90%;
+        padding-top: 10vh;
+    }
+
+    header h1 {
+        font-size: 10vw;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    label {
+        font-size: 4vw;
+    }
+
+    input {
+        font-size: 2em;
+        margin: 5% 0 20%;
+    }
+
+    legend {
+        font-size: 6vw;
+    }
+
+    div.main-form-fieldset-content {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10%;
+    }
+
+    input.signin-button {
+        font-size: 4vw;
+        margin-top: -30px;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}

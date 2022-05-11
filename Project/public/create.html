@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/create.css">
+    <!-- подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>SCocktail</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Share a cocktail</h1>
+    </header>
+
+    <main class="main">
+        <form>
+            <div class="right-form-part">
+                <label>Название</label>
+                <hr>
+                <input type="text" id="name-input" name="name" placeholder="Введите название коктейля..." required
+                    tabindex="1"><br>
+                <label>Объем</label>
+                <hr>
+                <input type="range" id="overall-volume-range" name="overall-volume" min="0" max="500" step="50"
+                    value="200"><br>
+                <label>Состав</label>
+                <hr>
+
+                <div class="div-composition">
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+                    <div class="composition-ingredients">
+                        <select class="ingredients-select">
+                            <option value="water" selected disabled>Выбрать</option>
+                            <option value="water">Вода</option>
+                            <option value="milk">Молоко</option>
+                            <option value="cream">Сливки</option>
+                            <option value="yogurt">Йогурт</option>
+                            <optgroup label="Пюре">
+                                <option value="orange">Апельсин</option>
+                                <option value="watermelon">Арбуз</option>
+                                <option value="banana">Банан</option>
+                                <option value="strawberry">Клубника</option>
+                                <option value="peach">Персик</option>
+                                <option value="apple">Яблоко</option>
+                            </optgroup>
+                            <optgroup label="Добавки">
+                                <option value="sugar">Сахар</option>
+                                <option value="honey">Мед</option>
+                            </optgroup>
+                        </select>
+                        <label id="persent-label">%</label>
+                        <input type="number" id="ingredient-volume" name="ingredient-volume" min="0" max="500" step="5"
+                            value="0">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="left-form-part">
+                <img src="assets/images/glass.png" alt="Glass"><br>
+                <label>Описание</label>
+                <hr>
+                <textarea id="description-textarea" name="description" rows=3 placeholder="Введите описание коктейля..."
+                    required tabindex="5"></textarea><br>
+                <button id="create-button" name="create-button">Создать</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
