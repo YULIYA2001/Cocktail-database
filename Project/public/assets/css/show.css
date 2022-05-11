@@ -1,0 +1,408 @@
+/*Переменные для цветов */
+:root {
+  --dark-text-color: rgb(153, 84, 6);
+  --light-color: rgb(226, 145, 53);
+  --cream-color: rgb(255, 239, 220);
+}
+
+/* Полоса прокрутки */
+::-webkit-scrollbar {
+  width: 10px;
+  background: linear-gradient(var(--light-color), var(--cream-color));
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--light-color);
+}
+
+body {
+  background: linear-gradient(var(--light-color), var(--cream-color)) no-repeat;
+  height: 100%;
+}
+
+/* Header */
+header h1 {
+  font-size: 4.5vw;
+  font-weight: 700;
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  margin: 0;
+  color: var(--dark-text-color);
+}
+
+
+/* Main */
+main {
+  padding-top: 2%;
+  margin: 0 auto;
+}
+
+section.description {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+div.description-left {
+  display: inline-block;
+  width: 45%;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+
+div.description-right {
+  display: inline-block;
+  width: 55%;
+  padding: 0 2em;
+  box-sizing: border-box;
+  height: 100%;
+  position: absolute;
+}
+
+section.reviews {
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+
+ul.comments-list {
+  padding: 0;
+}
+
+article.comment-article {
+  background-color: aquamarine;
+  width: 60%;
+  list-style-type: none;
+  padding: 3%;
+  margin: 3% 0;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgb(215, 177, 133);
+  border-color: rgb(113, 66, 13);
+  box-sizing: border-box;
+}
+
+article.comment-article:nth-child(even) {
+  margin-left: auto;
+  background-color: rgb(253, 207, 150);
+  border-color: rgb(255, 162, 41);
+}
+
+article.comment-article time,
+article.comment-article p.mail {
+  margin-top: 1.5vw;
+  display: inline-block;
+}
+
+article.comment-article p {
+  margin: 0;
+  display: inline-block;
+}
+
+article.comment-article div {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  border-color: var(--dark-text-color);
+  background-color: var(--dark-text-color);
+  border-width: 2px;
+  border-style: solid;
+  margin: 0 0 0.5em;
+}
+
+h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: var(--dark-text-color);
+  font-weight: 400;
+  font-size: 3vw;
+  margin: 0;
+}
+
+img {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: var(--dark-text-color);
+}
+
+textarea::-webkit-scrollbar {
+  border-radius: 0 3px 3px 0;
+}
+
+#comment-textarea {
+  width: 100%;
+  resize: none;
+  background-color: var(--cream-color);
+}
+
+#comment-textarea:focus {
+  color: black;
+}
+
+#description-textarea {
+  background-color: transparent;
+  border: none;
+  resize: none;
+  width: 100%;
+  text-align: justify;
+  margin-top: 0.5em;
+  padding: 0 1%;
+}
+
+#description-textarea::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+
+#description-textarea::-webkit-scrollbar-thumb {
+  background-color: var(--dark-text-color);
+}
+
+#send-button {
+  width: 50%;
+  margin-left: auto;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.5vw;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-align: center;
+}
+
+#send-button:hover {
+  background-color: var(--dark-text-color);
+  color: var(--cream-color);
+}
+
+button,
+textarea {
+  background-color: var(--cream-color);
+  border-color: var(--dark-text-color);
+  border-radius: 5px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 2px;
+  padding: 7px;
+}
+
+textarea,
+p,
+article,
+span.ingredient-name,
+span.ingredient-count {
+  /* font-size: 18px; */
+  font-size: 1.5vw;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+div.author-description p,
+span.ingredient-name,
+span.ingredient-count,
+ul.ingredients-list li,
+textarea,
+button {
+  color: var(--dark-text-color);
+}
+
+div.author-description p {
+  padding-left: 1%;
+}
+
+ul.ingredients-list {
+  margin: 0;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul.ingredients-list li {
+  width: 50%;
+  padding: 0;
+  margin-top: 0.5em;
+}
+
+span.ingredient-name {
+  margin-right: 30px;
+}
+
+div.rating-area,
+h2.name,
+h2.description-title,
+h2.volume-value {
+  display: inline-block;
+}
+
+div.inline-name-and-smth {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2.description-title,
+h2.volume-value {
+  margin-top: 1em;
+}
+
+/* Рейтинг */
+.rating-area {
+  overflow: hidden;
+  padding-top: 1vh;
+}
+
+.rating-area:not(:checked)>input {
+  display: none;
+}
+
+.rating-area:not(:checked)>label {
+  float: right;
+  width: 3vw;
+  padding: 0;
+  cursor: pointer;
+  font-size: 3vw;
+  line-height: 3vw;
+  color: var(--cream-color);
+}
+
+.rating-area:not(:checked)>label:before {
+  content: '✔';
+}
+
+.rating-area>input:checked~label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+
+.rating-area:not(:checked)>label:hover,
+.rating-area:not(:checked)>label:hover~label {
+  color: gold;
+}
+
+.rating-area>input:checked+label:hover,
+.rating-area>input:checked+label:hover~label,
+.rating-area>input:checked~label:hover,
+.rating-area>input:checked~label:hover~label,
+.rating-area>label:hover~input:checked~label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.rate-area>label:active {
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile version */
+@media only screen and (max-device-width : 500px),
+(max-width : 770px) {
+
+  header h1 {
+    font-size: 10vw;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  section.description,
+  section.reviews {
+    width: 80%;
+  }
+
+  div.description-left {
+    display: block;
+    width: 100%;
+  }
+
+  div.description-right {
+    display: block;
+    width: 100%;
+    position: static;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  #send-button {
+    margin: 5% auto;
+    padding: 15px;
+    font-size: 4vw;
+  }
+
+  #send-button,
+  #comment-textarea {
+    border-radius: 10px;
+    border-width: 4px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  textarea,
+  p,
+  article,
+  span.ingredient-name,
+  span.ingredient-count {
+    font-size: 4vw;
+  }
+
+  #description-textarea {
+    height: 15vh;
+  }
+
+  .rating-area {
+    padding-top: 0;
+  }
+
+  .rating-area:not(:checked)>label {
+    width: 5vw;
+    font-size: 5vw;
+    line-height: 5vh;
+  }
+
+  article.comment-article {
+    width: 100%;
+    margin-top: 1em;
+    border-width: 4px;
+  }
+
+  article.comment-article div {
+    margin-top: 0.5em;
+  }
+}

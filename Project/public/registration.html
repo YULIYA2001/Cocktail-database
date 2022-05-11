@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/registration.css">
+        <!-- подключение шрифтов -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+        <title>SCocktail</title>
+    </head>
+    <body>        
+        <header class="header">
+            <h1>Share a cocktail</h1>
+        </header>
+
+        <main class="main">
+            <form>
+                <fieldset>
+                    <legend>Регистрация</legend>
+                    <div class="main-form-fieldset-content">
+                        <div class="input-fields-div">
+                            <label>E-mail:</label><br>
+                            <input type="email" name="email" size="20" autocomplete="on" required><br>
+                            <label>Пароль:</label><br>
+                            <input type="text" name="password" size="8" required><br>
+                            <label>Подтвердить пароль:</label><br>
+                            <input type="text" name="password2" size="8" required><br>
+                        </div>
+                        <div class="gender-and-send-div">
+                            <label>Пол:</label><br>
+                            <label><input type="radio" name="gender" value="male" required checked>мужской</label><br>
+                            <label><input type="radio" name="gender" value="female">женский</label><br>
+                            <input class="send-button" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
