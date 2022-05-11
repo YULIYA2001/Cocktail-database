@@ -1,6 +1,8 @@
 # ITiROD
 **_Yuliya Golubovich 953501_**
 
+link: https://shareacocktail.web.app/
+
 ### Cocktail database
 A website, where user can share own unique cocktail recipe or rate cocktails created by others
 
