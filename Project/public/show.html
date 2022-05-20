@@ -1,190 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="assets/css/show.css">
-    <!-- подключение шрифтов -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap"
-        rel="stylesheet">
-    <title>SCocktail</title>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/show.css">   
+        <link rel="stylesheet" href="assets/css/ingredients.css">
+        <!-- подключение шрифтов -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap"
+            rel="stylesheet">
+        <title>SCocktail</title>
+    </head>
 
-<body>
-    <header class="header">
-        <h1>Share a cocktail</h1>
-    </header>
+    <body>
+        <header class="header">
+            <h1>Share a cocktail</h1>
+        </header>
 
-    <main class="main">
-        <section class="description">
-            <div class="description-left">
-                <img src="assets/images/glass.png" alt="Glass"><br>
-                <form>
-                    <textarea id="comment-textarea" name="comment" rows=3 placeholder="Комментарий..."
-                        required></textarea><br>
-                    <button id="send-button" name="send-button">Отправить</button>
-                </form>
-            </div>
+        <main class="main">
+            <section class="description">
+                <div class="description-left">
 
-            <div class="description-right">
-                <div class="inline-name-and-smth">
-                    <h2 class="name">Название</h2>
+                    <div class="external-image-div">
+                        <img src="assets/images/glass.png" alt="Glass"><br>
+                        <div class="glass-image-div">
+                             <!-- <div class="ingredient-picture" style="background-color: red;"></div> -->
+                        </div>
+                    </div>
+                    <form>
+                        <textarea id="comment-textarea" name="comment" rows=3 placeholder="Комментарий..."
+                            required></textarea><br>
+                        <button id="send-button" name="send-button"
+                            onclick="sendComment(); return false;">Отправить</button>
+                    </form>
+                </div>
 
-                    <!-- Рейтинг - звездочки -->
-                    <div class="rating-area">
-                        <input type="radio" id="star-5" name="rating" value="5">
-                        <label for="star-5" title="Оценка «5»"></label>
-                        <input type="radio" id="star-4" name="rating" value="4">
-                        <label for="star-4" title="Оценка «4»"></label>
-                        <input type="radio" id="star-3" name="rating" value="3">
-                        <label for="star-3" title="Оценка «3»"></label>
-                        <input type="radio" id="star-2" name="rating" value="2">
-                        <label for="star-2" title="Оценка «2»"></label>
-                        <input type="radio" id="star-1" name="rating" value="1">
-                        <label for="star-1" title="Оценка «1»"></label>
+                <div class="description-right">
+                    <div class="inline-name-and-smth">
+                        <h2 class="name" title="if its long">Название</h2>
+
+                        <!-- Рейтинг - звездочки -->
+                        <div class="rating-area">
+                            <input type="radio" id="star-5" name="rating" value="5" onclick="addRating(this)">
+                            <label for="star-5" title="Оценка «5»"></label>
+                            <input type="radio" id="star-4" name="rating" value="4" onclick="addRating(this)">
+                            <label for="star-4" title="Оценка «4»"></label>
+                            <input type="radio" id="star-3" name="rating" value="3" onclick="addRating(this)">
+                            <label for="star-3" title="Оценка «3»"></label>
+                            <input type="radio" id="star-2" name="rating" value="2" onclick="addRating(this)">
+                            <label for="star-2" title="Оценка «2»"></label>
+                            <input type="radio" id="star-1" name="rating" value="1" onclick="addRating(this)">
+                            <label for="star-1" title="Оценка «1»"></label>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <ul class="ingredients-list">
+                        <!-- <li>
+                            <span class="ingredient-name">ингред.1</span>
+                            <span class="ingredient-count">100%</span>
+                        </li>
+                        <li>
+                            <span class="ingredient-name">ингред.2</span>
+                            <span class="ingredient-count">20%</span>
+                        </li>
+                         -->
+                    </ul>
+
+                    <div class="inline-name-and-smth">
+                        <h2 class="description-title">Описание</h2>
+                        <h2 class="volume-value">100 ml</h2>
+                    </div>
+                    <hr>
+                    <div class="author-description">
+                        <textarea id="description-textarea" wrap="soft" name="cocktail-description" rows="3"
+                            disabled>Прекрасный отзыв о вкусе сего напитка. Прекрасный отзыв о чудесности сего напитка. Прекрасный отзыв о непревзойденности сего напитка. Просто отзыв сего напитка</textarea><br>
+                        <p id="author-p">Автор: почта_gmail.com</p>
                     </div>
                 </div>
+            </section>
 
+            <section class="reviews">
+                <h2>Отзывы</h2>
                 <hr>
-                <ul class="ingredients-list">
-                    <li>
-                        <span class="ingredient-name">ингред.1</span>
-                        <span class="ingredient-count">100%</span>
-                    </li>
-                    <li>
-                        <span class="ingredient-name">ингред.2</span>
-                        <span class="ingredient-count">20%</span>
-                    </li>
-                    <li>
-                        <span class="ingredient-name">ингред.3</span>
-                        <span class="ingredient-count">3%</span>
-                    </li>
-                    <li>
-                        <span class="ingredient-name">ингред.4</span>
-                        <span class="ingredient-count">4%</span>
-                    </li>
-                    <li>
-                        <span class="ingredient-name">ингред.5</span>
-                        <span class="ingredient-count">5%</span>
-                    </li>
-                    <li>
-                        <span class="ingredient-name">ингред.6</span>
-                        <span class="ingredient-count">6%</span>
-                    </li>
+                <ul class="comments-list">
+                    <!-- <article class="comment-article">
+                        <li>
+                            <p>Комментарий111111111111111111111111111111111111111111111111111111111111111111111111111111111, описывающий все отношение к данному напитку, отношение быть может самое лучшее,
+                                но как знать</p><br>
+                            <div>
+                                <time>11.03.2020</time>
+                                <p class="mail">почта_gmail.com</p>
+                            </div>
+                        </li>
+                    </article>                    -->
                 </ul>
+            </section>
+        </main>
+    </body>
 
-                <div class="inline-name-and-smth">
-                    <h2 class="description-title">Описание</h2>
-                    <h2 class="volume-value">100 ml</h2>
-                </div>
-                <hr>
-                <div class="author-description">
-                    <textarea id="description-textarea" wrap="soft" name="cocktail-description" rows="3"
-                        disabled>Прекрасный отзыв о вкусе сего напитка. Прекрасный отзыв о чудесности сего напитка. Прекрасный отзыв о непревзойденности сего напитка. Просто отзыв сего напитка</textarea><br>
-                    <p>Автор: почта_gmail.com</p>
-                </div>
-            </div>
-        </section>
+    <!-- --------------------------------------------------- -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = { 
+            apiKey: "AIzaSyCBXKlgG_kFT1g1ceWCOEyNip3pbL-wqTI",
+            authDomain: "shareacocktail.firebaseapp.com",
+            projectId: "shareacocktail",
+            storageBucket: "shareacocktail.appspot.com",
+            messagingSenderId: "23708994729",
+            appId: "1:23708994729:web:b85799248b5098df9e6db8",
+            measurementId: "G-24Z5N6H0SB"
+            };
 
-        <section class="reviews">
-            <h2>Отзывы</h2>
-            <hr>
-            <ul class="comments-list">
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий, описывающий все отношение к данному напитку, отношение быть может самое лучшее,
-                            но как знать</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 2</p>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 3, также что-то описывает. Непонятно что, но ведь это неважно</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
+        firebase.initializeApp(firebaseConfig);    
+        const auth = firebase.auth();
+        const database = firebase.database();
+    </script>
 
-
-
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-                <article class="comment-article">
-                    <li>
-                        <p>Комментарий 4. <br>Нічога сабе! Адкуль з'явілася беларуская літара і?</p><br>
-                        <div>
-                            <time>11.03.2020</time>
-                            <p class="mail">почта_gmail.com</p>
-                        </div>
-                    </li>
-                </article>
-
-
-
-
-            </ul>
-        </section>
-    </main>
-</body>
+    <script src="entity/ingredient.js"></script>
+    <script src="entity/cocktail.js"></script>
+    <script src="entity/comment.js"></script>
+    <script src="scripts/show.js"></script>
+    <!-- --------------------------------------------------- -->
 
 </html>

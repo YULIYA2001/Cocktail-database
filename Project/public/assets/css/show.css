@@ -75,7 +75,7 @@ ul.comments-list {
 }
 
 article.comment-article {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 60%;
   list-style-type: none;
   padding: 3%;
@@ -83,26 +83,51 @@ article.comment-article {
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  background-color: rgb(215, 177, 133);
-  border-color: rgb(113, 66, 13);
+  color: var(--dark-text-color);
+  /* background-color: rgb(215, 177, 133);
+  border-color: rgb(113, 66, 13); */
   box-sizing: border-box;
 }
 
 article.comment-article:nth-child(even) {
   margin-left: auto;
-  background-color: rgb(253, 207, 150);
-  border-color: rgb(255, 162, 41);
+  /* background-color: rgb(253, 207, 150);
+  border-color: rgb(255, 162, 41); */
+}
+
+p.mail {
+  text-align: right;
+
 }
 
 article.comment-article time,
 article.comment-article p.mail {
   margin-top: 1.5vw;
   display: inline-block;
+  width: auto;
 }
 
 article.comment-article p {
   margin: 0;
   display: inline-block;
+  width: 100%;
+}
+
+article.comment-article li>p {
+  overflow-x: auto;
+  padding-bottom: 1em;
+}
+
+article.comment-article li>p::-webkit-scrollbar,
+article.comment-article li>div::-webkit-scrollbar {
+  height: 4px;
+  background: transparent;
+}
+
+article.comment-article li>p::-webkit-scrollbar-thumb,
+article.comment-article li>div::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--dark-text-color);
 }
 
 article.comment-article div {
@@ -127,7 +152,7 @@ h2 {
 }
 
 img {
-  width: 60%;
+  /* width: 60%; */
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -242,13 +267,15 @@ ul.ingredients-list {
 }
 
 ul.ingredients-list li {
-  width: 50%;
+  width: 40%;
   padding: 0;
   margin-top: 0.5em;
+  display: flex;
+  align-items: flex-end;
 }
 
 span.ingredient-name {
-  margin-right: 30px;
+  width: 60%;
 }
 
 div.rating-area,
@@ -315,6 +342,46 @@ h2.volume-value {
   position: relative;
 }
 
+
+h2.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 350px;
+}
+
+.external-image-div {
+  position: relative;
+  height: 305px;
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  position: absolute;
+  height: 100%;
+  margin: auto;
+  z-index: 10;
+}
+
+.glass-image-div {
+  position: absolute;
+  height: 196px;
+  width: 145px;
+  margin-bottom: 17px;
+  margin-right: 10px;
+  margin-top: auto;
+}
+
+.ingredient-picture {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
 
 
@@ -404,5 +471,36 @@ h2.volume-value {
 
   article.comment-article div {
     margin-top: 0.5em;
+  }
+
+  .external-image-div {
+    width: 500px;
+    height: 587px;
+  }
+
+  .glass-image-div {
+    height: 377px;
+    width: 279px;
+    margin-bottom: 30px;
+    margin-right: 17px;
+    margin-top: auto;
+  }
+
+  ul.ingredients-list li {
+    width: 60%;
+  }
+
+  time {
+    margin-right: 7vw;
+  }
+
+  article>li>div {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  article.comment-article li>p,
+  article.comment-article li>div {
+    padding-bottom: 0.5em;
   }
 }
