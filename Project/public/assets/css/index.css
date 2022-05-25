@@ -177,11 +177,11 @@ form.search::after {
     color: var(--dark-text-color);
 }
 
-.top-list,
+#top-list,
 #catalog-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 
@@ -192,7 +192,7 @@ form.search::after {
 div.top-list-item,
 div.catalog-list-item {
     display: inline-block;
-    width: 22%;
+    width: 23%;
     border-radius: 30px;
     border-width: 4px;
     border-color: var(--dark-text-color);
@@ -206,7 +206,7 @@ div.catalog-list-item {
 }
 
 .container img {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -219,12 +219,25 @@ div.catalog-list-item {
     text-overflow: ellipsis;
     text-align: center;
     color: var(--dark-text-color);
-    margin: 0.5em auto;
+    margin: 0 0.5em;
 }
 
 .container p:hover {
     white-space: normal;
+    /* overflow-x: auto;
+    text-overflow: clip; */
 }
+
+.container p::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+}
+.container p::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--dark-text-color);
+}
+
+
 
 .container h2 {
     text-align: center;
@@ -267,6 +280,41 @@ div.catalog-list-item {
 .rating-result>span.active {
     color: gold;
     text-shadow: 1px 1px #c60;
+}
+
+
+.container .external-image-div {
+  position: relative;
+  height: 200px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.container img {
+  position: absolute;
+  /* height: 100%; */
+  margin: auto;
+  z-index: 10;
+}
+
+.container .glass-image-div {
+  position: absolute;
+  height: 129px;
+  width: 99px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-top: auto; 
+}
+
+.container .ingredient-picture {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 

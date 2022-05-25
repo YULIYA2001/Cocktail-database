@@ -69,10 +69,10 @@ div.right-form-part {
 
 img {
   box-sizing: border-box;
-  width: 50%;
+  /* width: 50%; */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: -30px;
+  /* margin-bottom: -30px; */
   display: block;
 }
 
@@ -190,6 +190,23 @@ select.ingredients-select {
   margin: 0 auto;
 }
 
+div.inline-volume {
+  display: flex;
+  justify-content: space-between;
+}
+
+#volume-label,
+#volume-value {
+  display: inline-block;
+}
+
+#volume-value {
+  padding-top: 6%;
+  margin-bottom: -6%;
+  font-size: 2vw;
+}
+
+
 /* красивый range */
 input[type=range] {
   -moz-appearance: none;
@@ -239,6 +256,52 @@ input[type=number]::-webkit-inner-spin-button {
   border-radius: 5px;
   background-color: var(--dark-text-color);
 }
+
+
+.external-image-div {
+  position: relative;
+  height: 305px;
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  position: absolute;
+  height: 100%;
+  margin: auto;
+  z-index: 10;
+}
+
+.glass-image-div {
+  position: absolute;
+  height: 196px;
+  width: 145px;
+  margin-bottom: 17px;
+  margin-right: 10px;
+  margin-top: auto;  
+}
+
+.ingredient-picture {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -342,5 +405,22 @@ input[type=number]::-webkit-inner-spin-button {
 
   img {
     margin-top: -60px;
+  }
+  
+  #volume-value {
+    font-size: 6vw;
+  }
+
+  .external-image-div {
+    width: 500px;
+    height: 587px;
+  }
+
+  .glass-image-div {
+    height: 377px;
+    width: 279px;
+    margin-bottom: 30px;
+    margin-right: 17px;
+    margin-top: auto;  
   }
 }

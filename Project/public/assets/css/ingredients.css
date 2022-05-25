@@ -1,0 +1,74 @@
+.water {
+    background-color: #9fc9ee;
+}
+
+.milk {
+    background-color: #ffffff;
+}
+
+.cream {
+    background-color: #fffebd;
+}
+
+.yogurt {
+    background-color: #fcf3cd;
+}
+
+.orange {
+    background-color: #fd9c13;
+}
+
+.watermelon {
+    background-color: #eb4a4ac8;
+}
+
+.banana {
+    background-color: #eddd33;
+}
+
+.strawberry {
+    background-color: #ff3700;
+}
+
+.peach {
+    background-color: #ee8637;
+}
+
+.apple {
+    background-color: #74f441;
+}
+
+.sugar {
+    background: linear-gradient(45deg,
+            #fff 25%,
+            rgba(255, 255, 255, 0) 25%) 0 0,
+        linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 75%,
+            #fff 75%) 0 0,
+        linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 75%,
+            #fff 75%) -3em 3em,
+        linear-gradient(45deg,
+            #fff 25%,
+            rgba(255, 255, 255, 0) 25%) 3em -3em;
+    background-size: 1px 1px;
+    background-color: #dcdcdc;
+}
+
+.honey {
+    background: linear-gradient(45deg,
+            #fff41e 25%,
+            rgba(255, 255, 255, 0) 25%) 0 0,
+        linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 75%,
+            #fff41e 75%) 0 0,
+        linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 75%,
+            #fff41e 75%) -3em 3em,
+        linear-gradient(45deg,
+            #fff41e 25%,
+            rgba(255, 255, 255, 0) 25%) 3em -3em;
+    background-size: 1px 1px;
+    background-color: #e5db1e;
+    font: 10px/2 'Trebuchet MS', Verdana, sans-serif;
+}

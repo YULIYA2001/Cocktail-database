@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="assets/css/registration.css">
         <!-- подключение шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat+Alternates:wght@400;700&display=swap"
+            rel="stylesheet">
         <title>SCocktail</title>
+
     </head>
-    <body>        
+
+    <body>
         <header class="header">
             <h1>Share a cocktail</h1>
         </header>
@@ -31,11 +36,38 @@
                             <label>Пол:</label><br>
                             <label><input type="radio" name="gender" value="male" required checked>мужской</label><br>
                             <label><input type="radio" name="gender" value="female">женский</label><br>
-                            <input class="send-button" type="submit" value="Отправить">
+                            <input class="send-button" type="submit" value="Отправить" onclick="register();return false;">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </main>
     </body>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = { 
+            apiKey: "AIzaSyCBXKlgG_kFT1g1ceWCOEyNip3pbL-wqTI",
+            authDomain: "shareacocktail.firebaseapp.com",
+            projectId: "shareacocktail",
+            storageBucket: "shareacocktail.appspot.com",
+            messagingSenderId: "23708994729",
+            appId: "1:23708994729:web:b85799248b5098df9e6db8",
+            measurementId: "G-24Z5N6H0SB"
+            };
+
+        firebase.initializeApp(firebaseConfig);    
+        const auth = firebase.auth();
+        const database = firebase.database();
+    </script>
+
+    <script async src="entity/user.js"></script>
+    <script async src="scripts/registration.js"></script>
+    <script async src="scripts/authentication.js"></script>
+    
+<!-- --------------------------------------------------- -->
+
+
 </html>
