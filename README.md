@@ -1,5 +1,4 @@
 # ITiROD
-**_Yuliya Golubovich 953501_**
 
 link: https://shareacocktail.web.app/
 
